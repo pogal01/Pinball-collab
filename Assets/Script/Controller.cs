@@ -4,46 +4,42 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour {
 
-    public GameObject lever_0;
-    public GameObject lever_1;
-    public GameObject ball;
-    private float maxAngle = 45;
-    private float originalAngle = 12.559f;
-    private float angleIncreaseAmount = 500f;
+    public float moveAmount = 25;
+    public GameObject Ball;
+    Rigidbody2D rb;
 
     // Use this for initialization
     void Start () {
+        rb = Ball.GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //left arrow = left lever moves up
-        //right arrow = right lever moves up
-        //up arrow = both lever move up
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) && transform.position.x >= -1.83f)
         {
-            if (-(lever_0.transform.eulerAngles.z - 360) <= maxAngle)
-            {
-                lever_0.transform.Rotate(Vector3.forward * Time.deltaTime * angleIncreaseAmount);
-            }
+            transform.Translate(Vector2.left * Time.deltaTime * moveAmount);
         }
-        else
+        if (Input.GetKey(KeyCode.RightArrow) && transform.position.x <= 1.71f)
         {
-            lever_0.transform.rotation = Quaternion.Euler(0, 0, -originalAngle);
+            transform.Translate(Vector2.right * Time.deltaTime * moveAmount);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
 
-            if ((lever_0.transform.eulerAngles.z - 360) <= -maxAngle)
-            {
-                lever_1.transform.Rotate(Vector3.forward * Time.deltaTime * angleIncreaseAmount);
-            }
-        }
-        else
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            lever_1.transform.rotation = Quaternion.Euler(0, 180, -originalAngle);
+            rb.AddForce(Vector2.up * 100);
+        }
+
+        if (Ball.transform.position.y < -5.19f)
+        {
+            Ball.transform.position = new Vector2(0, 4);
+            rb.velocity = new Vector3(0, 0, 0);
         }
 
     }
+
+   
+
+
 }
