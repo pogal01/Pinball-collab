@@ -545,6 +545,9 @@ GameObject:
   - component: {fileID: 942207078}
   - component: {fileID: 942207077}
   - component: {fileID: 942207079}
+  - component: {fileID: 942207082}
+  - component: {fileID: 942207081}
+  - component: {fileID: 942207080}
   m_Layer: 0
   m_Name: Pin ball
   m_TagString: Untagged
@@ -624,6 +627,53 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &942207080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942207076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdff8bc0dc8c16f41a3cbdaa8159c0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 942207076}
+  lever_1: {fileID: 1773350804}
+  activated: 0
+--- !u!114 &942207081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942207076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc936b0a764b2a419ff9dec5c0e4c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveAmount: 25
+  Ball: {fileID: 942207076}
+--- !u!50 &942207082
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942207076}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 8c06716f576d6754a9993b9e66197473, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1073972846
 GameObject:
   m_ObjectHideFlags: 0
