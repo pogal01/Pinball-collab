@@ -22,15 +22,14 @@ public class Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKey(KeyCode.LeftArrow) && transform.position.x >= -1.83f)
+        if (Input.GetKey(KeyCode.LeftArrow) && transform.position.x >= -4.5f)
         {
             transform.Translate(Vector2.left * Time.deltaTime * moveAmount);
         }
-        if (Input.GetKey(KeyCode.RightArrow) && transform.position.x <= 1.71f)
+        if (Input.GetKey(KeyCode.RightArrow) && transform.position.x <= 4.8f)
         {
             transform.Translate(Vector2.right * Time.deltaTime * moveAmount);
         }
-
 
         if (Input.GetKeyDown(KeyCode.Space) && currentJumpCooldown == 0)
         {
@@ -48,11 +47,12 @@ public class Controller : MonoBehaviour {
             }
         }
 
-        if (Ball.transform.position.y < -5.19f)
+        if (Ball.transform.position.y < -6)
         {
             Ball.transform.position = new Vector2(0, 4);
             rb.velocity = new Vector3(0, 0, 0);
             currentJumpCooldown = 0;
+            rectT.sizeDelta = new Vector2(100, 20.88f);
         }
 
     }
