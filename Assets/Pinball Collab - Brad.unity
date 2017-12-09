@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 52959925}
   - component: {fileID: 52959927}
   - component: {fileID: 52959926}
+  - component: {fileID: 52959928}
   m_Layer: 0
   m_Name: bumper_sprite
   m_TagString: Untagged
@@ -224,6 +225,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &52959928
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 52959924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fae735dd2f62d764db37938ced2f8c17, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &127356810
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +515,7 @@ GameObject:
   - component: {fileID: 564415800}
   - component: {fileID: 564415799}
   - component: {fileID: 564415798}
+  - component: {fileID: 564415803}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -568,12 +587,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 564415797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 2.46, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &564415803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564415797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d73476548ce1a242ab489a5616ed565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugMode: 0
+  shakeAmount: 2
+  shakeDuration: 1
+  smooth: 1
+  smoothAmount: 5
 --- !u!1 &611397742
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +648,7 @@ GameObject:
   - component: {fileID: 667868781}
   - component: {fileID: 667868783}
   - component: {fileID: 667868782}
+  - component: {fileID: 667868784}
   m_Layer: 0
   m_Name: bumper_sprite
   m_TagString: Untagged
@@ -690,6 +726,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &667868784
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667868780}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fae735dd2f62d764db37938ced2f8c17, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &766148132
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +988,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1295334295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.75, y: 6.29, z: -1}
+  m_LocalPosition: {x: 6.93, y: 6.29, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 52959925}
@@ -981,6 +1034,7 @@ GameObject:
   - component: {fileID: 1310407542}
   - component: {fileID: 1310407544}
   - component: {fileID: 1310407543}
+  - component: {fileID: 1310407545}
   m_Layer: 0
   m_Name: bumper_sprite
   m_TagString: Untagged
@@ -1058,6 +1112,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &1310407545
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1310407541}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fae735dd2f62d764db37938ced2f8c17, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1341682658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,6 +1207,7 @@ GameObject:
   - component: {fileID: 1353961842}
   - component: {fileID: 1353961844}
   - component: {fileID: 1353961843}
+  - component: {fileID: 1353961845}
   m_Layer: 0
   m_Name: bumper_sprite
   m_TagString: Untagged
@@ -1213,6 +1285,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &1353961845
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353961841}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fae735dd2f62d764db37938ced2f8c17, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1442038673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,7 +1617,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1932672826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.65, y: 1.4, z: 0}
+  m_LocalPosition: {x: 1.65, y: 1.4, z: -1}
   m_LocalScale: {x: 0.42371523, y: 13.47, z: 1}
   m_Children: []
   m_Father: {fileID: 766148133}
@@ -1634,7 +1723,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 418.25}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 267.07, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933044219
 MonoBehaviour:
